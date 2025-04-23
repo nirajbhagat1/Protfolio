@@ -1,0 +1,531 @@
+/* --- Color Palette ---
+   Primary: #007bff (Bootstrap Blue)
+   Secondary: #6c757d (Bootstrap Gray)
+   Dark: #212529 (Bootstrap Dark Gray/Black)
+   Light: #f8f9fa (Bootstrap Light Gray)
+   White: #ffffff
+   Text: #212529 (Dark Gray/Black)
+*/
+
+/* Apply scroll padding to the root element */
+html {
+  scroll-padding-top: 70px; /* Adjust this value to match or slightly exceed body's padding-top */
+  scroll-behavior: smooth; /* Optional: Add smooth scrolling */
+}
+
+/* General Styles */
+body {
+  padding-top: 70px; /* Adjust based on navbar height - KEEP THIS */
+  font-family: 'Poppins', sans-serif;
+  color: #212529; /* Default dark text */
+  line-height: 1.7;
+  background-color: #ffffff;
+}
+
+/* Navbar Styles */
+.navbar {
+  background-color: #212529 !important; /* Dark background */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+/* Style for navbar when scrolled */
+.navbar-scrolled {
+  background-color: rgba(33, 37, 41, 0.97) !important; /* Slightly transparent dark on scroll */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.navbar-brand {
+    font-weight: 700;
+    font-size: 1.6rem;
+    color: #ffffff;
+}
+.navbar-dark .navbar-brand:hover,
+.navbar-dark .navbar-brand:focus {
+    color: #007bff; /* Blue hover */
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: rgba(255, 255, 255, 0.85);
+    font-weight: 500;
+    transition: color 0.2s ease, transform 0.2s ease;
+    margin-left: 0.6rem;
+    margin-right: 0.6rem;
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
+    border-bottom: 3px solid transparent;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: #ffffff !important;
+    transform: translateY(-2px);
+}
+.navbar-dark .navbar-nav .nav-link.active {
+    color: #007bff !important; /* Blue for active link */
+    border-bottom: 3px solid #007bff; /* Blue underline for active */
+}
+
+/* Navbar Toggler */
+.navbar-dark .navbar-toggler {
+    border-color: rgba(255, 255, 255, 0.3);
+}
+.navbar-dark .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.9%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+
+/* Hero Section Styles */
+#home {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  /* Dark gradient background */
+  background: linear-gradient(rgba(33, 37, 41, 0.9), rgba(52, 58, 64, 0.95)), url('https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80') no-repeat center center;
+  background-size: cover;
+  color: #ffffff;
+  position: relative;
+  overflow: hidden;
+}
+
+#home .container {
+    max-width: 950px;
+    position: relative;
+    z-index: 2;
+    padding: 2rem;
+}
+
+#home h1 {
+  font-size: clamp(2.8rem, 7vw, 4.5rem);
+  font-weight: 700;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+  margin-bottom: 1rem;
+  color: #ffffff;
+}
+
+#home .lead {
+  font-size: clamp(1.2rem, 3.5vw, 1.6rem);
+  font-weight: 300;
+  margin-bottom: 1.5rem;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+#home p:not(.lead) {
+    font-size: clamp(1rem, 2.8vw, 1.2rem);
+    font-weight: 300;
+    margin-bottom: 3rem;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* Button Styles in Hero */
+#home .btn {
+    padding: 0.9rem clamp(1.8rem, 5vw, 3rem);
+    font-size: clamp(0.95rem, 2.2vw, 1.1rem);
+    font-weight: 600;
+    border-width: 0px;
+    border-radius: 50px; /* Pill shape */
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    margin: 0.5rem 0.3rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+#home .btn-primary {
+    background-color: #007bff; /* Blue button */
+    color: #ffffff; /* White text */
+}
+
+#home .btn-primary:hover {
+    background-color: #0056b3; /* Darker Blue hover */
+    transform: translateY(-3px) scale(1.03);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+#home .btn-outline-light {
+    background-color: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    color: rgba(255, 255, 255, 0.9);
+}
+
+#home .btn-outline-light:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: #ffffff;
+    color: #ffffff;
+    transform: translateY(-3px) scale(1.03);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* Social Icons in Hero */
+#home .social-links a i.fab {
+    font-size: 2rem;
+    color: rgba(255, 255, 255, 0.85);
+    transition: color 0.3s ease, transform 0.3s ease;
+    margin: 0 0.75rem;
+}
+
+#home .social-links a i.fab:hover {
+    color: #007bff; /* Blue hover */
+    transform: scale(1.3) rotate(-5deg);
+}
+
+
+/* Section General Styles */
+section {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    overflow: hidden;
+}
+#about, #projects, #contact {
+    background-color: #ffffff; /* White background */
+}
+#skills, #experience {
+    background-color: #f8f9fa; /* Light gray background */
+}
+
+/* Section Heading Styles */
+section h2.display-5 {
+    color: #212529; /* Dark heading */
+    font-weight: 700;
+    position: relative;
+    padding-bottom: 20px;
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+section h2.display-5::after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: #007bff; /* Blue underline */
+    border-radius: 2px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* About Section Specifics */
+#about img {
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(33, 37, 41, 0.1); /* Softer shadow */
+}
+#about .lead {
+    font-weight: 400;
+    color: #343a40; /* Slightly lighter dark text */
+    text-align: left; /* Keep lead paragraph left-aligned */
+}
+
+/* --- ADDED RULE FOR JUSTIFICATION --- */
+#about p:not(.lead) { /* Target paragraphs in #about, but not the lead one */
+  text-align: justify;
+}
+/* --- END OF ADDED RULE --- */
+
+
+/* Skills Section Styles */
+#skills .col { /* Target the column */
+    display: flex; /* Ensure columns have same height if needed */
+}
+
+#skills .skill-card {
+    background-color: #ffffff;
+    padding: 2rem 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05); /* Lighter shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border: 1px solid #e9ecef; /* Subtle border */
+}
+
+#skills .skill-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+}
+
+#skills .skill-card i {
+    font-size: 3rem;
+    color: #007bff; /* Blue icon */
+    margin-bottom: 1.5rem;
+}
+
+#skills .skill-card h4 {
+    color: #212529;
+    margin-bottom: 0.5rem;
+    font-weight: 600; /* Slightly bolder skill title */
+}
+#skills .skill-card p {
+    color: #495057; /* Medium gray text */
+    font-size: 0.95rem;
+}
+
+/* Project Card Styles */
+.project-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #dee2e6; /* Standard Bootstrap card border */
+    background-color: #ffffff;
+    border-radius: 8px; /* Bootstrap default is slightly less rounded */
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.project-card:hover {
+    transform: translateY(-5px); /* Less lift for minimal feel */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+}
+
+.project-card img {
+    border-top-left-radius: calc(8px - 1px); /* Adjust for border */
+    border-top-right-radius: calc(8px - 1px);
+    border-bottom: 1px solid #dee2e6;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+}
+
+.project-card .card-body {
+    padding: 1.5rem;
+}
+
+.project-card .card-title {
+    color: #212529;
+    font-weight: 600;
+}
+
+.project-card .card-text.small {
+    color: #6c757d; /* Bootstrap secondary gray */
+    margin-bottom: 1rem;
+    font-size: 0.8rem;
+}
+.project-card .card-text:not(.small) {
+    color: #495057;
+    font-size: 0.95rem;
+}
+
+.project-card .btn {
+    font-size: 0.8rem;
+    padding: 0.5rem 1.2rem;
+    border-radius: 50px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+.project-card .btn-primary {
+    background-color: #007bff; /* Blue */
+    border-color: #007bff;
+    color: #ffffff;
+}
+.project-card .btn-primary:hover {
+    background-color: #0056b3; /* Darker Blue */
+    border-color: #0056b3;
+}
+.project-card .btn-primary.disabled {
+    background-color: #adb5bd; /* Lighter gray disabled */
+    border-color: #adb5bd;
+    cursor: not-allowed;
+}
+.project-card .btn-outline-secondary {
+    border-color: #6c757d; /* Medium gray border */
+    color: #6c757d; /* Medium gray text */
+}
+.project-card .btn-outline-secondary:hover {
+    background-color: #5a6268; /* Darker gray background */
+    border-color: #5a6268;
+    color: #ffffff;
+}
+
+
+/* Experience Card Styles */
+#experience .card {
+    border: none;
+    border-left: 5px solid #007bff; /* Blue accent border */
+    margin-bottom: 1.5rem; /* Reduced margin */
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+#experience .card-body {
+    padding: 1.5rem;
+}
+#experience .card-title {
+    color: #212529;
+    font-weight: 600;
+}
+#experience .card-subtitle {
+    color: #0056b3; /* Darker Blue for subtitle */
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+#experience .text-muted.small { /* Date */
+    color: #6c757d !important;
+}
+#experience .card-text {
+    color: #495057;
+}
+#experience .card-text small.text-muted { /* Impact text */
+    color: #6c757d !important;
+    font-style: italic;
+}
+
+/* Contact Section Styles */
+#contact .lead {
+    margin-bottom: 3rem;
+    color: #495057; /* Medium gray */
+}
+
+#contact .btn {
+    padding: 0.9rem clamp(1.8rem, 5vw, 3rem);
+    font-size: clamp(0.95rem, 2.2vw, 1.1rem);
+    font-weight: 600;
+    border-width: 0px; /* No border */
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Softer shadow */
+    margin: 0.5rem 0.3rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+#contact .btn-primary { /* Email button */
+    background-color: #007bff; /* Blue */
+    color: #ffffff;
+}
+#contact .btn-primary:hover {
+    background-color: #0056b3; /* Darker Blue */
+    transform: translateY(-2px); /* Less lift */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+#contact .btn-outline-secondary { /* Download button */
+    background-color: transparent;
+    border: 2px solid #6c757d; /* Medium gray border */
+    color: #343a40; /* Dark gray text */
+}
+#contact .btn-outline-secondary:hover {
+    background-color: #5a6268; /* Darker gray background */
+    border-color: #5a6268;
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+#contact .social-links-contact a i.fab { /* Contact social icons */
+    color: #6c757d; /* Medium Gray */
+    font-size: 2.2rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+    margin: 0 0.8rem;
+}
+
+#contact .social-links-contact a i.fab:hover {
+    color: #007bff; /* Blue hover */
+    transform: scale(1.15);
+}
+
+#contact .text-muted i { /* Location icon */
+    color: #007bff; /* Blue */
+}
+
+/* Footer Styles */
+footer {
+    background-color: #212529; /* Dark footer */
+    padding-top: 30px; /* Reduced padding */
+    padding-bottom: 30px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+footer p {
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+}
+
+footer a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+footer a:hover {
+    color: #007bff; /* Blue hover */
+    text-decoration: none;
+}
+footer .fas.fa-chevron-up { /* Back to top icon */
+    font-size: 1.2rem; /* Slightly larger */
+    color: rgba(255, 255, 255, 0.5);
+    transition: color 0.3s ease;
+}
+footer a:hover .fas.fa-chevron-up {
+    color: #007bff;
+}
+
+
+/* Responsive Adjustments (Keep previous adjustments) */
+@media (max-width: 992px) {
+    .navbar-dark .navbar-nav .nav-link {
+        margin-left: 0.3rem;
+        margin-right: 0.3rem;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 768px) {
+    html {
+        scroll-padding-top: 60px; /* Adjust scroll padding for smaller navbar if height changes */
+    }
+    body {
+        padding-top: 60px;
+    }
+    #home h1 {
+        font-size: 2.8rem;
+    }
+    #home .lead {
+        font-size: 1.3rem;
+    }
+    section {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+     section h2.display-5 {
+        font-size: 2.2rem;
+        margin-bottom: 40px;
+    }
+    #home .btn, #contact .btn {
+        margin-bottom: 1rem;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 320px;
+    }
+    .project-card .card-body, #experience .card-body {
+        padding: 1.25rem;
+    }
+    #skills .skill-card {
+        padding: 1.5rem 1rem;
+    }
+    /* Ensure justification looks okay on smaller screens */
+    #about p:not(.lead) {
+        text-align: left; /* Switch back to left-align on smaller screens if needed */
+    }
+}
+
+@media (max-width: 576px) {
+    .navbar-brand {
+        font-size: 1.4rem;
+    }
+     #home h1 {
+        font-size: 2.4rem;
+    }
+    #home .lead {
+        font-size: 1.1rem;
+    }
+     section h2.display-5 {
+        font-size: 2rem;
+    }
+    footer {
+        padding-top: 25px;
+        padding-bottom: 25px;
+    }
+}
